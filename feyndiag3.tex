@@ -10,7 +10,7 @@
 
 \begin{document}
 
-\title{Tree level Feynamn graphs for electron-positron annihilation}
+\title{Tree Level Feynamn Graphs for electron-positron Annihilation}
 \author{Shannon Moraes}
 \date{\today}
 \maketitle
@@ -20,21 +20,26 @@
         \centering
         \begin{minipage}{0.45\textwidth}
                 \centering
-                \begin{tikzpicture}
-                        \feynmandiagram [horizontal=a to b] {
-                                a -- [fermion] f1 -- [fermion] b,
-                                f1 -- [photon, edge label=$\gamma$] f2,
-                                f2 -- [fermion] f3 -- [fermion] b,};
+                \begin{tikzpicture}       
+			\feynmandiagram[horizontal=a to b] {
+    i1 [particle=\( \psi \)] -- [fermion] a -- [fermion] b -- [particle=\( \psi \)] o1,
+    a -- [fermion, edge label=\( f \)] b,
+    a -- [photon, edge label=\( \gamma \)] o2,
+    b -- [photon, edge label=\( \gamma \)] o3,
+  };
+
                 \end{tikzpicture}
         \end{minipage}
         \hfill
         \begin{minipage}{0.45\textwidth}
                 \centering
                 \begin{tikzpicture}
-                        \feynmandiagram [horizontal=a to b] {
-                                a -- [fermion] f1 -- [fermion] b,
-                                f1 -- [photon, edge label=$\gamma$] f2,
-                                f2 -- [fermion] f3 -- [fermion] b,};
+			\feynmandiagram[horizontal=a to b] {
+    i1 [particle=\( \psi \)] -- [fermion] a -- [fermion] b -- [particle=\( \psi \)] o1,
+    a -- [fermion, edge label=\( f \)] b,
+    a -- [photon, edge label=\( \gamma \)] o2,
+    b -- [photon, edge label=\( \gamma \)] o3,
+  };
                 \end{tikzpicture}
         \end{minipage}
         \caption{Feynman graphs for the lowest order contributions to electron-
