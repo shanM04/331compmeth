@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usepackage{tikz-feynman} %for diagrams
+\usepackage{subcaption} %alignment
+\usepackage{graphicx}
+\usepackage{caption} %figure captions
+\usepackage[backend=bibtex, style=numeric]{biblatex} %bibtex refs
+
+\addbibresource{references.bib}
+
+\begin{document}
+
+\title{Tree level Feynamn graphs for electron-positron annihilation}
+\author{Shannon Moraes}
+\date{\today}
+\maketitle
+
+\section{Diagrams}
+\begin{figure}[h!]
+        \centering
+        \begin{minipage}{0.45\textwidth}
+                \centering
+                \begin{tikzpicture}
+                        \feynmandiagram [horizontal=a to b] {
+                                a -- [fermion] f1 -- [fermion] b,
+                                f1 -- [photon, edge label=$\gamma$] f2,
+                                f2 -- [fermion] f3 -- [fermion] b,};
+                \end{tikzpicture}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+                \centering
+                \begin{tikzpicture}
+                        \feynmandiagram [horizontal=a to b] {
+                                a -- [fermion] f1 -- [fermion] b,
+                                f1 -- [photon, edge label=$\gamma$] f2,
+                                f2 -- [fermion] f3 -- [fermion] b,};
+                \end{tikzpicture}
+        \end{minipage}
+        \caption{Feynman graphs for the lowest order contributions to electron-
+positron annihilation \cite{Martin2025}}
+\end{figure}
+
+\printbibliography
+
+\end{document}
