@@ -16,7 +16,7 @@ def ext(filepath):
 
 		if match:
 			lumpb = float(match.group(1))
-			lumfb = lumpb*0.0001
+			lumfb = lumpb*0.001
 			print(f'required luminosity: {lumfb:.1f}/fb')
 		else:
 			print('haha thought you fixed it?')
