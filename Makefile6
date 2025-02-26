@@ -1,0 +1,30 @@
+# Compiler
+CXX = g++
+CXXFLAGS = -Wall -std=c++17 `root-config --cflags`
+LDFLAGS = `root-config --libs`
+
+# Executables
+EXECS = treescript6 hist6
+
+# Object files
+OBJS = treescript6.o hist6.o
+
+# Default rule
+all: $(EXECS)
+
+# Compile treescript6
+treescript6: treescript6.o
+	$(CXX) $(CXXFLAGS) -o treescript6 treescript6.o $(LDFLAGS)
+
+# Compile hist6
+hist6: hist6.o
+	$(CXX) $(CXXFLAGS) -o hist6 hist6.o $(LDFLAGS)
+
+# Compile object files
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Clean rule
+clean:
+	rm -f $(EXECS) $(OBJS)
+
