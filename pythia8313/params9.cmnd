@@ -9,5 +9,5 @@ SoftQCD:all = on
 # proton PDF set
 PDF:pSet = 8
 # no. of events to simulate
-Main:numberOfEvents = 1000
+Main:numberOfEvents = 100000
 
