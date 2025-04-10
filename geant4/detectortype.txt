@@ -1,0 +1,4 @@
+The particle detector being simulated is a calorimeter detecting 'galactic material'
+This has 10 layers with thickness = (10mm+5mm) making the thickness of the calorimeter (10*15mm)=15cm
+The gap thickness and material is 5mm and lead (Pb)
+The absorber thickness and material is 10mm and liquid Argon (Ar)
